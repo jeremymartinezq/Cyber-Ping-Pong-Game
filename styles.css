@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+  --neon-cyan: #0ff;
+  --neon-magenta: #f0f;
+  --neon-yellow: #ff0;
+  --neon-green: #0f0;
+  --neon-red: #f55;
+  --dark-bg: #050505;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background-color: var(--dark-bg);
+  background-image: 
+    linear-gradient(to right, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  overflow: hidden;
+}
+
+#game-container {
+  width: 80vw;
+  max-width: 1200px;
+  height: 80vh;
+  max-height: 800px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+              0 0 40px rgba(0, 255, 255, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: var(--dark-bg);
+}
+
+.cyber-glow {
+  text-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 20px var(--neon-cyan);
+  letter-spacing: 2px;
+}
+
+.cyber-text {
+  color: var(--neon-cyan);
+  position: relative;
+  font-weight: bold;
+  text-shadow: 0 0 5px var(--neon-cyan);
+}
+
+.cyber-button {
+  background: transparent;
+  color: var(--neon-cyan);
+  border: 2px solid var(--neon-cyan);
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cyber-button:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 15px var(--neon-cyan);
+  transform: translateY(-2px);
+}
+
+.cyber-button:active {
+  transform: translateY(0);
+  box-shadow: 0 0 5px var(--neon-cyan);
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -100%;
+  width: 10px;
+  height: calc(100% + 4px);
+  background: var(--neon-cyan);
+  opacity: 0.3;
+  transform: skewX(-20deg);
+  transition: all 0.5s;
+}
+
+.cyber-button:hover::before {
+  left: 200%;
+}
+
+/* Difficulty button styles */
+.easy-btn {
+  color: var(--neon-green);
+  border-color: var(--neon-green);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.easy-btn:hover {
+  background: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+.easy-btn::before {
+  background: var(--neon-green);
+}
+
+.normal-btn {
+  color: var(--neon-yellow);
+  border-color: var(--neon-yellow);
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.normal-btn:hover {
+  background: rgba(255, 255, 0, 0.1);
+  box-shadow: 0 0 15px var(--neon-yellow);
+}
+
+.normal-btn::before {
+  background: var(--neon-yellow);
+}
+
+.hard-btn {
+  color: var(--neon-red);
+  border-color: var(--neon-red);
+  box-shadow: 0 0 10px rgba(255, 85, 85, 0.5);
+}
+
+.hard-btn:hover {
+  background: rgba(255, 85, 85, 0.1);
+  box-shadow: 0 0 15px var(--neon-red);
+}
+
+.hard-btn::before {
+  background: var(--neon-red);
+}
+
+.cyber-button-alt {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cyber-button-alt:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #game-container {
+    width: 90vw;
+    height: 70vh;
+  }
+
+  .text-6xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.5rem;
+  }
+  
+  .cyber-button {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+} 

@@ -1,0 +1,12 @@
+{
+  "name": "cybernetic-ping-pong",
+  "version": "1.0.0",
+  "description": "A futuristic, cyberpunk-themed ping pong game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "author": "",
+  "license": "MIT"
+} 

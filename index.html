@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybernetic Ping Pong</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white overflow-hidden h-screen w-screen flex items-center justify-center">
+    <!-- Game Container -->
+    <div id="game-container" class="relative">
+        <!-- Start Screen -->
+        <div id="start-screen" class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black bg-opacity-80">
+            <h1 class="text-6xl font-bold mb-8 cyber-glow text-cyan-400">CYBER PONG</h1>
+            <div class="flex flex-col space-y-4">
+                <button id="single-player-btn" class="cyber-button px-8 py-4 text-2xl">SINGLE PLAYER</button>
+                <button id="two-player-btn" class="cyber-button px-8 py-4 text-2xl">TWO PLAYER</button>
+            </div>
+            <div class="mt-8 cyber-text text-sm">
+                <p>Single Player: Use Arrow Keys ↑/↓</p>
+                <p>Two Player: Player 1 (W/S) | Player 2 (↑/↓)</p>
+            </div>
+        </div>
+        
+        <!-- Difficulty Selection Screen -->
+        <div id="difficulty-select" class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black bg-opacity-80 hidden">
+            <h2 class="text-4xl font-bold mb-8 cyber-glow text-cyan-400">SELECT DIFFICULTY</h2>
+            <div class="flex flex-col space-y-4">
+                <button id="easy-btn" class="cyber-button easy-btn px-8 py-4 text-2xl">EASY</button>
+                <button id="normal-btn" class="cyber-button normal-btn px-8 py-4 text-2xl">NORMAL</button>
+                <button id="hard-btn" class="cyber-button hard-btn px-8 py-4 text-2xl">HARD</button>
+                <button id="back-btn" class="cyber-button-alt mt-4 px-8 py-2 text-xl">BACK</button>
+            </div>
+        </div>
+        
+        <!-- Game UI -->
+        <div id="game-ui" class="absolute top-0 left-0 w-full p-4 flex justify-between hidden">
+            <div id="player1-score" class="cyber-text text-4xl">0</div>
+            <div id="player2-score" class="cyber-text text-4xl">0</div>
+        </div>
+        
+        <!-- Canvas -->
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- Game Over Screen -->
+        <div id="game-over" class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black bg-opacity-80 hidden">
+            <h2 class="text-5xl font-bold mb-4 cyber-glow">GAME OVER</h2>
+            <div id="winner-text" class="text-3xl mb-8 cyber-text"></div>
+            <button id="restart-btn" class="cyber-button px-8 py-4 text-2xl">PLAY AGAIN</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+    <script src="effects.js"></script>
+</body>
+</html> 
