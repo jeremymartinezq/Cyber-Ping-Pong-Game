@@ -2,6 +2,11 @@
 
 A futuristic, interactive, and visually exciting Cyberpunk-themed Ping Pong game built with HTML5 Canvas, TailwindCSS, and JavaScript.
 
+<img width="948" alt="Screenshot 2025-05-01 222353" src="https://github.com/user-attachments/assets/0ceac9d5-ccd9-43d9-93a5-9205df3226f8" />
+<img width="949" alt="Screenshot 2025-05-01 221257" src="https://github.com/user-attachments/assets/41937468-2398-4344-a6f9-3d691c77f157" />
+<img width="948" alt="Screenshot 2025-05-01 224111" src="https://github.com/user-attachments/assets/05162c2e-5730-4d3f-a8f8-96be0db0b350" />
+
+
 ## Features
 
 ### 🎮 Gameplay
@@ -61,10 +66,10 @@ The game is built with vanilla JavaScript and HTML5 Canvas, using:
 - Particle systems for visual effects
 - Responsive design for different screen sizes
 
-## Credits
-
-Created by [Your Name] as a cyberpunk-themed game project.
-
 ## License
 
 MIT License 
+
+## Author
+
+Developed by Jeremy Martinez-Quinones as a cyberpunk-themed game project.
